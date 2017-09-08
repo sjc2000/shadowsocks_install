@@ -239,7 +239,7 @@ download_files(){
         exit 1
     fi
     # Download Shadowsocks file
-    if ! wget --no-check-certificate -O shadowsocks-master.zip https://github.com/shadowsocks/shadowsocks/archive/master.zip; then
+    if ! wget --no-check-certificate -O shadowsocks-master.zip https://github.com/shadowsocks/shadowsocks/archive/2.9.1.zip; then
         echo -e "[${red}Error${plain}] Failed to download shadowsocks python file!"
         exit 1
     fi
