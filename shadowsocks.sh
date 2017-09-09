@@ -233,11 +233,12 @@ pre_install(){
 
 # Download files
 download_files(){
-    # Download libsodium file
-    if ! wget --no-check-certificate -O libsodium-1.0.13.tar.gz https://github.com/jedisct1/libsodium/releases/download/1.0.13/libsodium-1.0.13.tar.gz; then
-        echo -e "[${red}Error${plain}] Failed to download libsodium-1.0.13.tar.gz!"
-        exit 1
-    fi
+    # skip Download libsodium file because download timeout error under VM
+    echo -e "skip Download libsodium file because download timeout error under VM"
+    #if ! wget --no-check-certificate -O libsodium-1.0.13.tar.gz https://github.com/jedisct1/libsodium/releases/download/1.0.13/libsodium-1.0.13.tar.gz; then
+    #    echo -e "[${red}Error${plain}] Failed to download libsodium-1.0.13.tar.gz!"
+    #    exit 1
+    #fi
     # Download Shadowsocks file
     if ! wget --no-check-certificate -O shadowsocks-master.zip https://github.com/shadowsocks/shadowsocks/archive/2.9.1.zip; then
         echo -e "[${red}Error${plain}] Failed to download shadowsocks python file!"
