@@ -330,7 +330,7 @@ install(){
         exit 1
     fi
 
-    cd ${cur_dir}/shadowsocks-master
+    cd ${cur_dir}/shadowsocks-2.9.1
     python setup.py install --record /usr/local/shadowsocks_install.log
 
     if [ -f /usr/bin/ssserver ] || [ -f /usr/local/bin/ssserver ]; then
